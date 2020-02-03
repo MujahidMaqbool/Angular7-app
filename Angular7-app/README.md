@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.4.
 
 ## Description
-Create an angular app that meets the following requirements:
+An angular app that meets the following requirements:
 1) Demonstrates the usage of ngOnChanges, @Ouput() and @Input()
 2) Lazy load modules
 3) Demonstrates the usages of route guards
