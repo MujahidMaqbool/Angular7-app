@@ -1,0 +1,77 @@
+<div class="pull-left max-width">
+
+  <nav class="ml-auto mr-auto mt-2">
+    <div class="max-width nav-links disp_flex justify-content-center flex-wrap">
+
+      <button class="btn btn-primary" [routerLinkActive]="['active']" [routerLink]="['/home/home/about']">About
+        Us</button>
+      <button class="btn btn-primary" [routerLinkActive]="['active']"
+        [routerLink]="['/home/home/services']">Services</button>
+      <button class="btn btn-primary" [routerLinkActive]="['active']" [routerLink]="['/home/home/team']">Our
+        Team</button>
+      <button class="btn btn-primary" [routerLinkActive]="['active']" [routerLink]="['/home/home/contactUs']">Contact
+        Us</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="body-content">
+      <div class="alert alert-info mt-2" role="alert">
+        Nested <b>"router-outlet"</b>
+        <p>Message sent from child component(<b style="color:red">{{childPageName}}</b>) to parent component Home</p>
+      </div>
+
+      <h5></h5>
+
+      <router-outlet></router-outlet>
+
+
+
+
+      <section id="partners">
+        <div class="container">
+          <h4 class="text-center m-b-40">We've worked with</h4>
+          <div class="partners disp_flex flex-row flex-wrap">
+            <span> <img src="../assets/5-partners/apple.PNG" alt="" /></span>
+            <span> <img src="../assets/5-partners/airbnb.png" alt="" /></span>
+            <span> <img src="../assets/5-partners/google.PNG" alt="" /></span>
+            <span> <img src="../assets/5-partners/nvidia.PNG" alt="" /></span>
+            <span> <img src="../assets/5-partners/tesla.PNG" alt="" /></span>
+            <span> <img src="../assets/5-partners/samsung.PNG" alt="" /></span>
+            <span> <img src="../assets/5-partners/facebook.PNG" alt="" /></span>
+            <span> <img src="../assets/5-partners/microsoft.PNG" alt="" /></span>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3 logo-footer">
+            <img src="../assets/1-header/logo.png" class="pull-left m-r-10 m-b-20 m-l-20" alt="Easy Work" />
+            <h5 class="white pull-left">Easy Work</h5>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            <div class="p-lr-20">
+              <label>Address</label>
+              818 18th Street, Washington, DC, 20006
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            <div class="p-lr-20">
+              <label>Phone</label>
+              <p>03-7451 5283</p>
+              <label>Fax</label>
+              <p>03-7451 5283</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  </main>
+
+</div>

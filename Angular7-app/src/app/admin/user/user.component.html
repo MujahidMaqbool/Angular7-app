@@ -1,0 +1,29 @@
+<div>
+  <h5>User (parent)</h5>
+  <p>
+    <button class="btn btn-primary" (click)="sendToChild('Hello Child...')">Send message to Child</button>
+    <b> Response from child : "{{ receivedChildMessage }}"</b>
+  </p>
+
+
+  <!--currency directive-->
+  <!-- <div><input type="text" appMycurrency class="form-control" /></div> -->
+</div>
+
+<div class="row mt-1 pt-4 pb-4 border">
+
+  <div class="col-xs-12 col-sm-12 col-md-6">
+
+    <app-create-user> Create user </app-create-user>
+
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6">
+
+    <app-user-list [receivedParentMessage]="messageToSendP" (messageToEmit)="getMessage($event)">
+      <h5>User list (child)</h5>
+      Send message to parent
+    </app-user-list>
+
+  </div>
+
+</div>

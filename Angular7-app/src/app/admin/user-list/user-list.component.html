@@ -1,0 +1,39 @@
+<h5>
+  <ng-content select="h5"></ng-content>
+</h5>
+
+
+<div class="table-responsive-lg mt-2">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Employee name</th>
+        <th>Phone#</th>
+        <th>Department</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="users.length>0">
+        <tr *ngFor="let user of users">
+          <td>{{user.name}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.department}}</td>
+          <td>{{user.salary | currency}}</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="text-center">465465465456</td>
+        </tr>
+      </ng-container>
+
+    </tbody>
+  </table>
+</div>
+
+
+<p>
+  <button class="btn btn-primary mb-1" (click)="sendMessageToParent('Hello parent...')">
+    <ng-content></ng-content>
+  </button> <b> Message from Parent : "{{ receivedParentMessage }}"</b>
+</p>
+<p><b>ngOnChanges say's ==> </b> <br /> {{changes}} </p>

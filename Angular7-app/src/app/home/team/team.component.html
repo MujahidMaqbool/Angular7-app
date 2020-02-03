@@ -1,0 +1,33 @@
+<section #team id="team">
+  <div class="container">
+    <div class="media col-sm-12 p-l-15">
+      <div class="media-left p-r-20">
+        <span class="Icon-circle pink">
+          <img src="../assets/7-icons/happy-face.svg" class="img-circle" alt="Sample Image">
+        </span>
+      </div>
+      <div class="media-body">
+        <div class="col-sm-12">
+          <h4>Our important people is listed here</h4>
+        </div>
+      </div>
+    </div>
+    <div class="pull-left max-width team-wrapper">
+      <form>
+
+        <div class="pull-left max-width team-container">
+          <div *ngFor="let user of usersList; index as i" [attr.data-index]="i" class="profile-box">
+
+            <div class="user-image"> <img src="{{user.imgSrc}}" class="img-responsive" alt="gaetan" /></div>
+            <div class="user-detail">
+              <p class="uName">{{user.name}}</p>
+              <small class="uPosition">{{user.position}}</small>
+            </div>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>

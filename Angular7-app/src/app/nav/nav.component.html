@@ -1,0 +1,10 @@
+<header class="d-flex justify-content-center align-items-center">
+  <ul>
+    <li><a [routerLink]="['/login']" [routerLinkActive]="['active']">Login</a></li>
+    <li><a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a></li>
+    <li><a [routerLink]="['/dashboard']" [routerLinkActive]="['active']">Dashboard</a></li>
+    <li><a [routerLink]="['/admin']" [routerLinkActive]="['active']">Admin</a></li>
+    <li><a [routerLink]="['/login']" (click)="logout()">Logout</a></li>
+
+  </ul>
+</header>

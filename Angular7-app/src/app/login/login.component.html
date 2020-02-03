@@ -1,0 +1,48 @@
+<h2 class="text-center">Login</h2>
+
+<form [formGroup]="loginForm" novalidate role="form" class="login-container animate fadeInUp">
+
+  <div class="row">
+    <div class="col-sm-3 m-auto mt-1 login-wrapper">
+
+      <div class="alert alert-info" role="alert">
+        <p class="m-b-0">
+          email: <b>admin@yopmail.com</b> <br />
+          password: <b>123</b>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label class="text-left">Email</label>
+            <input type="email" formControlName="email" class="form-control" />
+
+            <div *ngIf="loginForm.get('email').errors?.pattern" class="alert alert-danger">
+              Valid email is required.
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label class="text-left">Password(only numbers allow)</label>
+            <input type="password" (keypress)="numberOnly($event)" maxlength="12" formControlName="password"
+              autocomplete="off" class="form-control" />
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <button
+            [disabled]="(loginForm.get('email').value =='' || loginForm.get('email').errors?.pattern || loginForm.get('password').value =='')"
+            (click)="submitForm(loginForm.value)" type="button" class="btn btn btn-primary w-100">
+            Submit
+          </button>
+          <div *ngIf="errorLogin" class="alert alert-danger mt-2">Login with above given credentials</div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+</form>

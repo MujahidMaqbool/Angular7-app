@@ -1,0 +1,33 @@
+<h5>Create user (child)</h5>
+
+<form [formGroup]="createUserForm" novalidate role="form">
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Employee name</label>
+      <input type="text" class="form-control" formControlName="name" />
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Phone no.</label>
+      <input type="text" (keypress)="numberOnly($event)" class="form-control" formControlName="phone" maxlength="12" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Employee department</label>
+      <input type="text" class="form-control" formControlName="department" />
+    </div>
+    <div class="form-group col-md-6">
+      <label>Salary (Currency directive)</label>
+      <input type="text" class="form-control" appMycurrency formControlName="salary" />
+    </div>
+  </div>
+  <button type="submit" [disabled]="!createUserForm.valid" class="btn btn-primary w-100"
+    (click)="createNewUser(createUserForm.value)">
+    <ng-content></ng-content>
+  </button>
+
+
+</form>
+<!-- <pre>{{createUserForm.value | json}}</pre> -->
